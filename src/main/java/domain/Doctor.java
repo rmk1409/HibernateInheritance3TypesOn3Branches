@@ -6,8 +6,7 @@ import javax.persistence.*;
  * Created by r.pogorelov on 14.09.2016.
  */
 @Entity
-@Inheritance
-@DiscriminatorColumn
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Doctor {
     @Id
     @GeneratedValue
